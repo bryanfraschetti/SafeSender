@@ -5,22 +5,35 @@
     <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
     <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'">
     <link href="./styles.css" rel="stylesheet">
-    <title>Safe Sender</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <title>SafeSender</title>
+<!--     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500&display=swap" rel="stylesheet"> -->
   </head>
   <body>
     <nav>
-      <h1 id="welcomemsg">Safe Sender</h1>
+      <h1 class="welcomeMsg">Safe Sender</h1>
+      <h1 class="userID">My Address: N54JFJ3R04</h1>
     </nav>
-    <div id="ourbuttons">
-      <span>
-        <button id="send" type="submit">Send</button>
-        <button id="receive" type="submit">Receive</button>
-        <button id="userid">Placeholder</button>
-      </span>
+
+    <div class = "header">
+      <button class = "send" id="send">Send</button>
+      <button class = "receive" id="receive">Receive</button>
     </div>
+
+    <div class = "middle">
+      <p>Upload your super secret image</p>
+      <button id = "upload" class = "upload">Upload</button>
+    </div>
+
+
+    <div class = "bottom">
+      <input type="text" placeholder="Recipient's Address" name="recipientAddress" required>
+      <button class = "encrypt">Decrypt</button>
+    </div>
+
     <script src="./renderer.js"></script>
+    <script src="./index.js"></script>
+
   </body>
 </html>
