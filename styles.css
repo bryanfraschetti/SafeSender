@@ -52,11 +52,6 @@ nav{
     margin-right: 18%;
 }
 
-.userid{
-    border-radius: 5px;
-}
-
-
 .middle{
     margin-top: 10rem;
     text-align: center;
@@ -83,6 +78,6 @@ button{
     font-weight: 300;
     font-size: 1em;
 }
-button:click{
-    background-color:white;
+button:hover{
+    background-color:grey;
 }
