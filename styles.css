@@ -1,3 +1,69 @@
 /* styles.css */
-
+body{
+    background-color: #2D4059;
+    font-family: 'Inter', sans-serif;
+    color: white;
+    font-weight: 300;
+}
 /* Add styles here to customize the appearance of your app */
+
+nav{
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+    padding-left: 0;
+    height: 8vh;
+    color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    background-color: black;
+}
+
+h1{
+    display: flex;
+    vertical-align: middle;
+    text-align: center;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    color: white;
+}
+
+#welcomemsg{
+    text-align: center;
+}
+
+#ourbuttons{
+    margin-top: 10vh;
+}
+
+#send{
+    margin-left: 20%;
+    margin-right: 15%;
+}
+
+#receive{
+    margin-left: 15%;
+    margin-right: 18%;
+}
+
+#userid{
+    border-radius: 5px;
+}
+
+/* [id]:not([id='userid']) */
+button{
+    background-color: black;
+    border-radius: 20px;
+    width: 130px;
+    height: 40px;
+    border: none;
+    font-family: 'Inter', sans-serif;
+    color: white;
+    font-weight: 300;
+    font-size: 1em;
+}
