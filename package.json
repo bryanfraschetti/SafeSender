@@ -1,0 +1,22 @@
+{
+  "name": "safesender",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bryanfraschetti/SafeSender.git"
+  },
+  "author": "Bryan Fraschetti, Ahmed Anwer",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bryanfraschetti/SafeSender/issues"
+  },
+  "homepage": "https://github.com/bryanfraschetti/SafeSender#readme",
+  "devDependencies": {
+    "electron": "^17.2.0"
+  }
+}
