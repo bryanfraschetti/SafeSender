@@ -22,5 +22,11 @@
       </span>
     </div>
     <script src="./renderer.js"></script>
+    <script type="text/javascript">
+      const electron = require('electron');
+      const {ipcRenderer}=electron;
+      const send = document.getElementById('send');
+      send.addEventListener('submit', function xx(){console.log("ahaahah")})
+    </script>
   </body>
 </html>
