@@ -10,7 +10,10 @@ function createWindow () {
     width: 1300,
     height: 800,
     webPreferences: {
-      preload: path.join(__dirname, 'preload.js')
+      preload: path.join(__dirname, 'preload.js'),
+      nodeIntegration: true,
+      contextIsolation: false,
+      enableRemoteModule: true,
     }
   })
 
@@ -72,6 +75,8 @@ function uploadImageFile() {
             fs.copyFile(filePath, imgFolderPath, (err) => {
                 if (err) throw err;
                 console.log(fileName + ' uploaded.');
+                console.log(result)
+                console.log(imgFolderPath)
             });
         }
     });
@@ -82,7 +87,7 @@ function uploadImageFile() {
 // In html:  <input type="button" class="upload-image" value="Upload Image">
 
 ipcMain.on('upload', function(event){
-  console.log("yuh")
+  uploadImageFile()
 })    
 
 // var uploadBtn = document.getElementById("upload");

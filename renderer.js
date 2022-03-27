@@ -17,7 +17,6 @@ const ipc = electron.ipcRenderer
 
 
 uploadBtn.addEventListener("click", function(e){
-	console.log("renere.js")
   	ipc.send('upload')
 });
 
