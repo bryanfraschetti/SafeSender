@@ -4,6 +4,27 @@ const path = require('path')
 const ipc = ipcMain
 let {PythonShell} = require('python-shell')
 
+let shell1 = new PythonShell('generateAddress.py', {
+  pythonOptions: ['-u'], 
+  mode: 'json'
+});
+
+var optionsConnect = {
+  mode: 'json'
+};
+
+// ipcMain.on('generateAddress', function(event){
+//   console.log("got the click to start the script")
+ 
+// })
+
+PythonShell.run('generateAddress.py', optionsConnect, function (err, results) {
+  if (err) throw err;
+  console.log(results)
+  ipc.send('generateAddress')
+  event.sender.send('generateAddress', results[0])
+});
+
 function createWindow () {
   // Create the browser window.
   const mainWindow = new BrowserWindow({

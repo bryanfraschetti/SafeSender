@@ -20,3 +20,10 @@ uploadBtn.addEventListener("click", function(e){
 	console.log("renere.js")
   	ipc.send('upload')
 });
+
+// ipc.send('generateAddress')
+ipc.on('generateAddress', function(event, arg){
+	console.log(event)
+	console.log(arg)
+	console.log("sexy")
+})
