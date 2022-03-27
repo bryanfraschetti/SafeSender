@@ -4,26 +4,36 @@ const path = require('path')
 const ipc = ipcMain
 let {PythonShell} = require('python-shell')
 
-let shell1 = new PythonShell('generateAddress.py', {
+let shell1 = new PythonShell('encrypt.py', {
   pythonOptions: ['-u'], 
   mode: 'json'
 });
 
-var optionsConnect = {
+var optionsGenerate = {
   mode: 'json'
 };
 
-// ipcMain.on('generateAddress', function(event){
-//   console.log("got the click to start the script")
- 
-// })
+var optionsEncrypt = {
+  mode: 'text',
+  pythonOptions: ['-u'], // get print results in real-time
+  args: ["C:\Users\sahme\AppData\Roaming\electron-quick-start\safe.jpg"]
+};
 
-PythonShell.run('generateAddress.py', optionsConnect, function (err, results) {
-  if (err) throw err;
-  console.log(results)
-  ipc.send('generateAddress')
-  event.sender.send('generateAddress', results[0])
-});
+var optionsDecrypt = {
+  mode: 'text',
+  pythonOptions: ['-u'], // get print results in real-time
+  args: [cipherImgPath,keyImgPath]
+};
+
+
+ipcMain.on('generateAddress', function(event){
+  PythonShell.run('generateAddress.py', optionsGenerate, function (err, results) {
+    if (err) throw err;
+    console.log(results)
+    event.sender.send('generateAddress', results[0])
+  });
+})   
+
 
 function createWindow () {
   // Create the browser window.
@@ -72,7 +82,9 @@ app.on('window-all-closed', function () {
 // code. You can also put them in separate files and require them here.
 
 const fs = require('fs');       // module that interacts with the file system
-
+var plainImgPath = "";
+var cipherImgPath = "";
+var keyImgPath = ""
 function uploadImageFile() {
 
     // opens a window to choose file
@@ -96,15 +108,36 @@ function uploadImageFile() {
             fs.copyFile(filePath, imgFolderPath, (err) => {
                 if (err) throw err;
                 console.log(fileName + ' uploaded.');
-                console.log(result)
                 console.log(imgFolderPath)
+                plainImgPath = imgFolderPath
             });
         }
     });
 }
 
 
-ipcMain.on('upload', function(event){
+ipcMain.on('uploadKeyImage', function(event){
+  uploadImageFile()
+})
+
+ipcMain.on('uploadCipherImage', function(event){
   uploadImageFile()
 })    
+
+ipcMain.on('uploadPlainBtn', function(event){
+  uploadImageFile()
+}) 
+
+ipcMain.on('encrypt', function(event){
+  console.log("TRYING TO ENCRYPT")
+  PythonShell.run('encrypt.py', optionsEncrypt, function (err, results) {
+    if (err) throw err;
+    console.log(results)
+  });
+})    
+
+
+
+
+
 

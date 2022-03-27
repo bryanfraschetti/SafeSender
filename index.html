@@ -13,7 +13,7 @@
   <body>
     <nav>
       <h1 class="welcomeMsg">SafeSender</h1>
-      <h1 class="userID">My Address: </h1>
+      <h1 id = "userAddress" class="userID">My Address: </h1>
     </nav>
 
     <div class = "header">
@@ -26,23 +26,23 @@
       <button id = "uploadPlain" class = "upload">Upload</button>
     </div>
 
-
     <div class = "bottom" id = "bottomSend">
-      <input type="text" placeholder="Recipient's Address" name="recipientAddress" required>
-      <button class = "encrypt">Encrypt</button>
+      <input id = "inputRecAdd" type="text" placeholder="Recipient's Address">
+      <button id = "encrypt" class = "encrypt">Encrypt</button>
     </div>
 
 
     <div class = "middle" id = "middleReceive">
       <p>Upload the cipher image</p>
       <button id = "uploadCipher" class = "upload">Upload</button>
+      <p>Upload the key</p>
+      <button id = "uploadKeyImage" class = "upload">Upload</button>
     </div>
 
 
     <div class = "bottom" id = "bottomReceive">
-      <input type="text" placeholder="Address Key" name="keyAddress" required>
-      <button id = "uploadKeyImage" class = "upload">Upload</button>
-      <button class = "encrypt">Decrypt</button>
+      <input id = "inputRecAdd" type="text" placeholder="Address Key">
+      <button id = "decrypt" class = "encrypt">Decrypt</button>
     </div>
 
     <script src="./renderer.js"></script>
