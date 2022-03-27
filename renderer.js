@@ -17,7 +17,35 @@ const ipc = electron.ipcRenderer
 
 
 uploadBtn.addEventListener("click", function(e){
+	sendgui = document.getElementById("sendgui")
+
+	var bottom = document.getElementById("bottom")
+
+	if(bottom !== null){
+		while(bottom.firstChild){
+			bottom.removeChild(bottom.firstChild)
+		}
+		bottom.parentNode.removeChild((bottom.parentNode).lastChild)
+	}
+
+	var bottomsend = document.createElement("div")
+	bottomsend.id = "bottom"
+	bottomsend.className = "bottom"
+
+	var bottomin = document.createElement("input")
+	bottomin.type = "input"
+	bottomin.placeholder="Recipient's Address"
+	bottomin.name = "recipientAddress"
+	bottomsend.appendChild(bottomin)
+
+	var encrypt = document.createElement("button")
+	encrypt.className="encrypt"
+	encrypt.innerHTML="Encrypt"
+	bottomsend.appendChild(encrypt)
+
+	sendgui.appendChild(bottomsend)
 	console.log("renere.js")
   	ipc.send('upload')
+	  
 });
 

@@ -83,11 +83,5 @@ function uploadImageFile() {
 
 ipcMain.on('upload', function(event){
   console.log("yuh")
-})    
-
-// var uploadBtn = document.getElementById("upload");
-
-// uploadBtn.addEventListener("click", function(){
-//   uploadImageFile()
-// })
+})
 

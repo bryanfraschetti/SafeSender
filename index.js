@@ -1,7 +1,6 @@
 var send = document.getElementById("send");
 var receive = document.getElementById("receive");
 
-
 send.addEventListener("click", function(){
 
 	console.log("send button")
@@ -37,26 +36,35 @@ send.addEventListener("click", function(){
 
 	sendgui.appendChild(midsend)
 
-	senduploadbtn.addEventListener("click", function(){
-		sendgui = document.getElementById("sendgui")
+	// senduploadbtn.addEventListener("click", function(){
+	// 	sendgui = document.getElementById("sendgui")
 
-		var bottomsend = document.createElement("div")
-		bottomsend.className = "bottom"
+	// 	var bottom = document.getElementById("bottom")
 
-		var bottomin = document.createElement("input")
-		bottomin.type = "input"
-		bottomin.placeholder="Recipient's Address"
-		bottomin.name = "recipientAddress"
-		bottomsend.appendChild(bottomin)
+	// 	if(bottom !== null){
+	// 		while(bottom.firstChild){
+	// 			bottom.removeChild(bottom.firstChild)
+	// 		}
+	// 		bottom.parentNode.removeChild((bottom.parentNode).lastChild)
+	// 	}
 
-		var encrypt = document.createElement("button")
-		encrypt.className="encrypt"
-		encrypt.innerHTML="Encrypt"
-		bottomsend.appendChild(encrypt)
+	// 	var bottomsend = document.createElement("div")
+	// 	bottomsend.id = "bottom"
+	// 	bottomsend.className = "bottom"
 
-		sendgui.appendChild(bottomsend)
+	// 	var bottomin = document.createElement("input")
+	// 	bottomin.type = "input"
+	// 	bottomin.placeholder="Recipient's Address"
+	// 	bottomin.name = "recipientAddress"
+	// 	bottomsend.appendChild(bottomin)
 
-	})
+	// 	var encrypt = document.createElement("button")
+	// 	encrypt.className="encrypt"
+	// 	encrypt.innerHTML="Encrypt"
+	// 	bottomsend.appendChild(encrypt)
+
+	// 	sendgui.appendChild(bottomsend)
+	// })
 })
 
 
@@ -99,7 +107,16 @@ receive.addEventListener("click", function(){
 	recuploadbtn.addEventListener("click", function(){
 		receivegui = document.getElementById("receivegui")
 
+		var bottom = document.getElementById("bottom")
+		if(bottom !== null){
+			while(bottom.firstChild){
+				bottom.removeChild(bottom.firstChild)
+			}
+			bottom.parentNode.removeChild((bottom.parentNode).lastChild)
+		}
+
 		var bottomrec = document.createElement("div")
+		bottomrec.id = "bottom"
 		bottomrec.className = "bottom"
 
 		var bottomin = document.createElement("input")
@@ -117,5 +134,3 @@ receive.addEventListener("click", function(){
 
 	})
 })
-
-
