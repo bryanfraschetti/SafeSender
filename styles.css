@@ -34,63 +34,58 @@ nav{
 }*/
 
 .welcomeMsg{
-    display: flex;
-    position: fixed;
-    justify-content: center;
+    vertical-align: middle;
+    text-align: center;
     align-items: center;
-    width: 100vw;
-    height: 8vh;
     font-family: Inter-SemiBold, sans-serif;
     font-weight: 500;
     color: white;
-    background-color: rgb(0,11,22);
-    margin-top: 0;
-    margin-left: 0;
-    top: 0;
-    left: 0;
-    font-size: 1.8em;
 }
 
 .userID{
+    display: inline-block;
     float: left;
-    margin-top: 8.5vh;
-    margin-left: 1rem;   
+    margin: 1rem;   
     font-weight: 300;
-    font-size: 0.9em;
+    font-size: 14px;
 }
 
 .header{
-    margin-top: 11vh;
+    margin-top: 10vh;
 }
 
 .send{
-    margin-left: 25%;
-    margin-right: 12%;
+    margin-left: 20%;
+    margin-right: 15%;
 }
 
 .receive{
-    margin-left: 12%;
-    margin-right: 25%;
+    margin-left: 15%;
+    margin-right: 18%;
 }
 
+.userid{
+    border-radius: 5px;
+}
+
+
 .middle{
-    margin-top: 25vh;
+    display: none;
+    margin-top: 10rem;
     text-align: center;
 }
 .bottom{
-    display: block;
-    text-align: center;
+    display: none;
     position: absolute;
     bottom: 0;
     right: 40%;
     margin-bottom: 5rem;
 }
 
-/* [id]:not([id='userid']) */
 button{
     background-color: rgb(0,100,0);
     border-radius: 30px;
-    width: 12%;
+    width: 130px;
     height: 45px;
     cursor: pointer;    
     border: none;
@@ -99,37 +94,12 @@ button{
     font-size: 1.1em;
 }
 button:hover{
-	background-color: rgb(0,150,0);
+    background-color: rgb(0,150,0);
 }
 
-input[type='input']{
-    width: 10vw;
-    height: 3vh;
-    display: flex;
-    position: fixed;
-    justify-content: center;
-    align-items: center;
-    top: 75vh;
-    left: 44.9%;
-    border-radius: 10px;
-    border: none;
-    font-family: Inter-Light, sans-serif;
-}
- 
 .encrypt{
-    top: 80.2vh;
-    left: 44%;
-    display: flex;
-    position: fixed;
-    justify-content: center;
-    align-items: center;
-}
-
-.decrypt{
-    top: 80.2vh;
-    left: 44%;
-    display: flex;
-    position: fixed;
-    justify-content: center;
-    align-items: center;
+    padding: 10px;
+    position: relative;
+    left: 0%;
+    margin-left:  10px;
 }

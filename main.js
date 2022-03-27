@@ -83,5 +83,7 @@ function uploadImageFile() {
 }
 
 
-
+ipcMain.on('upload', function(event){
+  uploadImageFile()
+})    
 

@@ -11,45 +11,39 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500&display=swap" rel="stylesheet"> -->
   </head>
   <body>
-    <div>
-      <nav>
-        <h1 class="welcomeMsg">SafeSender</h1>
-        <h1 class="userID">My Address: N54JFJ3R04</h1>
-      </nav>
-    </div>
-
-
-<!--     <div class = "header">
-      <button class = "send" id="send">Send</button>
-      <button class = "receive" id="receive">Receive</button>
-    </div>
-
-    <section id="sendgui">
-
-
-    </section>
-
-    <section id="receivegui">
-    </section> -->
+    <nav>
+      <h1 class="welcomeMsg">SafeSender</h1>
+      <h1 class="userID">My Address: N54JFJ3R04</h1>
+    </nav>
 
     <div class = "header">
       <button class = "send" id="send">Send</button>
       <button class = "receive" id="receive">Receive</button>
     </div>
 
-    <div class = "middle">
-      <p>Upload your super secret image</p>
-      <button id = "upload" class = "upload">Upload</button>
+    <div class = "middle" id = "middleSend">
+      <p>Upload the plain image</p>
+      <button id = "uploadPlain" class = "upload">Upload</button>
     </div>
 
 
-    <div class = "bottom">
+    <div class = "bottom" id = "bottomSend">
       <input type="text" placeholder="Recipient's Address" name="recipientAddress" required>
+      <button class = "encrypt">Encrypt</button>
+    </div>
+
+
+    <div class = "middle" id = "middleReceive">
+      <p>Upload the cipher image</p>
+      <button id = "uploadCipher" class = "upload">Upload</button>
+    </div>
+
+
+    <div class = "bottom" id = "bottomReceive">
+      <input type="text" placeholder="Address Key" name="keyAddress" required>
+      <button id = "uploadKeyImage" class = "upload">Upload</button>
       <button class = "encrypt">Decrypt</button>
     </div>
-
-    
-
 
     <script src="./renderer.js"></script>
     <script src="./index.js"></script>
