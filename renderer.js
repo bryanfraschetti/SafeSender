@@ -16,9 +16,8 @@ const electron = require("electron")
 const ipc = electron.ipcRenderer
 
 
-uploadBtn.addEventListener("click", function(e){
-<<<<<<< HEAD
-=======
+if(uploadBtn !== null){
+	uploadBtn.addEventListener("click", function(e){
 	sendgui = document.getElementById("sendgui")
 
 	var bottom = document.getElementById("bottom")
@@ -47,8 +46,8 @@ uploadBtn.addEventListener("click", function(e){
 
 	sendgui.appendChild(bottomsend)
 	console.log("renere.js")
->>>>>>> 88ef89dfd107b7fcb8ee4faedc8c3af34c50a92a
   	ipc.send('upload')
 	  
-});
+	});
+}
 

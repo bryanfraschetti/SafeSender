@@ -83,21 +83,5 @@ function uploadImageFile() {
 }
 
 
-// click event to trigger upload function
-// In html:  <input type="button" class="upload-image" value="Upload Image">
 
-ipcMain.on('upload', function(event){
-<<<<<<< HEAD
-  uploadImageFile()
-})    
-
-// var uploadBtn = document.getElementById("upload");
-
-// uploadBtn.addEventListener("click", function(){
-//   uploadImageFile()
-// })
-=======
-  console.log("yuh")
-})
->>>>>>> 88ef89dfd107b7fcb8ee4faedc8c3af34c50a92a
 
