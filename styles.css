@@ -1,7 +1,19 @@
 /* styles.css */
+@font-face {
+    font-family: "Inter-Light";
+    src: url("Inter-Light.ttf");
+}
+
+@font-face {
+    font-family: "Inter-SemiBold";
+    src: url("Inter-SemiBold.ttf");
+}
+
 body{
-    background-color: #2D4059;
-    font-family: 'Inter', sans-serif;
+    background-image: linear-gradient(rgb(0,22,45), rgb(0,50,50));
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-family: Inter-light, sans-serif;
     color: white;
     font-weight: 300;
 }
@@ -22,43 +34,47 @@ nav{
 }*/
 
 .welcomeMsg{
-    vertical-align: middle;
-    text-align: center;
+    display: flex;
+    position: fixed;
+    justify-content: center;
     align-items: center;
-    font-family: 'Inter', sans-serif;
+    width: 100vw;
+    height: 8vh;
+    font-family: Inter-SemiBold, sans-serif;
     font-weight: 500;
     color: white;
+    background-color: rgb(0,11,22);
+    margin-top: 0;
+    margin-left: 0;
+    top: 0;
+    left: 0;
+    font-size: 1.8em;
 }
 
 .userID{
-    display: inline-block;
     float: left;
-    margin: 1rem;   
+    margin-top: 8.5vh;
+    margin-left: 1rem;   
     font-weight: 300;
-    font-size: 14px;
+    font-size: 0.9em;
 }
 
 .header{
-    margin-top: 10vh;
+    margin-top: 11vh;
 }
 
 .send{
-    margin-left: 20%;
-    margin-right: 15%;
+    margin-left: 25%;
+    margin-right: 12%;
 }
 
 .receive{
-    margin-left: 15%;
-    margin-right: 18%;
+    margin-left: 12%;
+    margin-right: 25%;
 }
-
-.userid{
-    border-radius: 5px;
-}
-
 
 .middle{
-    margin-top: 10rem;
+    margin-top: 25vh;
     text-align: center;
 }
 .bottom{
@@ -72,17 +88,48 @@ nav{
 
 /* [id]:not([id='userid']) */
 button{
-    background-color: black;
-    border-radius: 20px;
-    width: 130px;
-    height: 40px;
+    background-color: rgb(0,100,0);
+    border-radius: 30px;
+    width: 12%;
+    height: 45px;
     cursor: pointer;    
     border: none;
-    font-family: 'Inter', sans-serif;
+    font-family: Inter-Light, sans-serif;
     color: white;
-    font-weight: 300;
-    font-size: 1em;
+    font-size: 1.1em;
 }
-button:click{
-    background-color:white;
+button:hover{
+	background-color: rgb(0,150,0);
+}
+
+input[type='input']{
+    width: 10vw;
+    height: 3vh;
+    display: flex;
+    position: fixed;
+    justify-content: center;
+    align-items: center;
+    top: 75vh;
+    left: 44.9%;
+    border-radius: 10px;
+    border: none;
+    font-family: Inter-Light, sans-serif;
+}
+ 
+.encrypt{
+    top: 80.2vh;
+    left: 44%;
+    display: flex;
+    position: fixed;
+    justify-content: center;
+    align-items: center;
+}
+
+.decrypt{
+    top: 80.2vh;
+    left: 44%;
+    display: flex;
+    position: fixed;
+    justify-content: center;
+    align-items: center;
 }
